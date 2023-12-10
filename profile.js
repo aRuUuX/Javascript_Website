@@ -6,12 +6,18 @@ if (!isLoggedIn) {
 
 const displayUsername = document.getElementById("displayUsername");
 const displayEmail = document.getElementById("displayEmail");
+const displayPhone = document.getElementById("displayPhone");
+const displayAddress = document.getElementById("displayAddress");
+const displayAge = document.getElementById("displayAge");
 const logoutBtn = document.getElementById("logoutBtn");
 const deleteAccountBtn = document.getElementById("deleteBtn");
 
 const nameInput = document.getElementById("floatingInputName");
 const emailInput = document.getElementById("floatingInputEmail");
 const passwordInput = document.getElementById("floatingPassword");
+const phoneInput = document.getElementById("floatingPhone");
+const ageInput = document.getElementById("floatingAge");
+const addressInput = document.getElementById("floatingAddress");
 // const confirmPasswordInput = document.getElementById("floatingConfirmPassword");
 const registerForm = document.getElementById("registerForm");
 const changePasswordForm = document.getElementById("changePasswordForm");
@@ -24,7 +30,10 @@ const confirmChangePasswordInput = document.getElementById(
 const userCredentials = JSON.parse(localStorage.getItem("user"));
 
 displayUsername.textContent = `${userCredentials.username}`;
-displayEmail.textContent = `Email: ${userCredentials.email}`;
+displayEmail.textContent = `${userCredentials.email}`;
+displayPhone.textContent = `${userCredentials.phone}`;
+displayAddress.textContent = `${userCredentials.address}`;
+displayAge.textContent = `${userCredentials.age}`;
 
 logoutBtn.addEventListener("click", () => {
   localStorage.setItem("isLoggedIn", "false");
@@ -40,11 +49,17 @@ deleteAccountBtn.addEventListener("click", () => {
 
 let username = userCredentials.username;
 let email = userCredentials.email;
+let phone = userCredentials.phone;
+let address = userCredentials.address;
+let age = userCredentials.age;
 let password = "";
 let confirmPassword = "";
 
 nameInput.value = userCredentials.username;
 emailInput.value = userCredentials.email;
+phoneInput.value = userCredentials.phone;
+addressInput.value = userCredentials.address;
+ageInput.value = userCredentials.age;
 
 nameInput.addEventListener("input", () => {
   username = nameInput.value;
@@ -53,6 +68,19 @@ nameInput.addEventListener("input", () => {
 emailInput.addEventListener("input", () => {
   email = emailInput.value;
 });
+
+phoneInput.addEventListener("input", () => {
+  phone = phoneInput.value;
+});
+
+addressInput.addEventListener("input", () => {
+  address = addressInput.value;
+});
+
+ageInput.addEventListener("input", () => {
+  age = ageInput.value;
+});
+
 passwordInput.addEventListener("input", () => {
   password = passwordInput.value;
 });
@@ -74,6 +102,9 @@ registerForm.addEventListener("submit", (e) => {
   } else {
     existingUser.username = username;
     existingUser.email = email;
+    existingUser.phone = phone;
+    existingUser.address = address;
+    existingUser.age = age;
 
     localStorage.setItem("user", JSON.stringify(existingUser));
     alert("Account updated successfully!");

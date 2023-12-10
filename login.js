@@ -1,6 +1,7 @@
 const emailInput = document.getElementById("floatingInputEmail");
 const passwordInput = document.getElementById("floatingPassword");
 const loginForm = document.getElementById("loginForm");
+const agreeCheckbox = document.getElementById('remember-me');
 
 let email = "";
 let password = "";

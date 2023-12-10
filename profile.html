@@ -9,107 +9,146 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+      <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
     <title>Profile</title>
   </head>
 
   <style>
     body {
-      background: #654ea3;
-      background: linear-gradient(to right, #3494e6, #ec6ead);
+      background: rgb(40, 39, 39);
       min-height: 100vh;
       overflow-x: hidden;
     }
+
+    .gradient-custom {
+      /* fallback for old browsers */
+      background: rgb(79, 78, 78);
+      }
   </style>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">E-Commerce</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Products</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="profile.html"
-                  >Profile</a
-                >
-              </li>
-              <li class="nav-item"></li>
-            </ul>
-            <button class="btn btn-primary ms-2" id="logoutBtn">Logout</button>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <header id="header" class="fixed-top ">
+      <div class="container d-flex align-items-center justify-content-lg-between">
+  
+        <h1 class="logo me-auto me-lg-0"><a href="home.html">Gp<span>.</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto" href="home.html">Home</a></li>
+            <li><a class="nav-link scrollto active" href="profile.html">Profile</a></li>
+            <li><a class="nav-link scrollto" href="home.html">About</a></li>
+            <li><a class="nav-link scrollto" href="index.html">Products</a></li>
+            <li><a class="nav-link scrollto" href="home.html">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+        <a href="login.html" class="get-started-btn scrollto">Get Started</a>
+  
+      </div>
+    </header><!-- End Header -->
 
     <!-- MAIN CONTENT  -->
     <main>
-      <section class="container">
-        <div class="row py-5 px-4">
-          <div class="col-md-5 mx-auto">
-            <!-- Profile widget -->
-            <h1>Profile</h1>
-            <div class="bg-white shadow rounded overflow-hidden">
-              <div class="px-4 pt-0 pb-4 cover">
-                <div class="media align-items-end profile-head">
-                  <div class="profile mr-3">
-                    <img
-                      src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
-                      alt="..."
-                      width="130"
-                      class="rounded mb-2 mt-3"
-                    />
-                  </div>
-                  <div class="media-body mb-5">
-                    <h4 class="mt-0 mb-0" id="displayUsername"></h4>
-                    <p id="displayEmail"></p>
+        <section class="vh-120">
+          <div class="container-xxl py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col col-lg-10 mb-4 mb-lg-0">
+                <div class="card mb-3" style="border-radius: .5rem;">
+                  <div class="row g-0">
+                    <div class="col-md-4 gradient-custom text-center text-white"
+                      style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                        alt="Avatar" class="img-fluid my-5" style="width: 120px;" />
+                      <h5 id="displayUsername"></h5>
+                      <p>Certified Manginginom</p>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body p-4">
+                        <h6>Information</h6>
+                        <hr class="mt-0 mb-4">
+                        <div class="row pt-1">
+                          <div class="col-6 mb-3">
+                            <h6>Email</h6>
+                            <p class="text-muted" id="displayEmail"></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Phone</h6>
+                            <p class="text-muted" id="displayPhone"></p>
+                          </div>
+                        </div>
+                        <h6>Other Information</h6>
+                        <hr class="mt-0 mb-4">
+                        <div class="row pt-1">
+                          <div class="col-6 mb-3">
+                            <h6>Address</h6>
+                            <p class="text-muted" id="displayAddress"></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Age</h6>
+                            <p class="text-muted" id="displayAge"></p>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                          <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="mt-auto d-flex justify-content-end">
+                          <button
+                            type="button"
+                            class="btn btn-primary me-2"
+                            data-toggle="modal"
+                            data-target="#editAccount"
+                          >
+                            Edit Account
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-toggle="modal"
+                            data-target="#changePassword"
+                          >
+                            Change password
+                          </button>
+                          <button class="btn btn-primary ms-2" id="logoutBtn">Logout</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  class="btn btn-primary d-flex justify-content-between"
-                  data-toggle="modal"
-                  data-target="#editAccount"
-                  style="margin-right: 10px"
-                >
-                  Edit Account
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-secondary mt-2 d-flex justify-content-between"
-                  data-toggle="modal"
-                  data-target="#changePassword"
-                  style="margin-right: 10px"
-                >
-                  Change password
-                </button>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        
         <!-- <button class="btn btn-primary">Edit account</button> -->
         <div>
           <!-- Modal for editing account-->
@@ -158,6 +197,39 @@
                     />
                     <label for="floatingInputEmail">Email address</label>
                   </div>
+                  <!-- Add the phone number input -->
+                  <div class="mb-3 form-floating">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="floatingPhone"
+                      placeholder="123-456-7890"
+                      required
+                    />
+                    <label for="floatingPhone">Phone number</label>
+                  </div>
+                  <!-- ... (previous code) ... -->
+                  <div class="mb-3 form-floating">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="floatingAddress"
+                        placeholder="123 Street, City, Country"
+                        required
+                    />
+                    <label for="floatingAddress">Address</label>
+                  </div>
+                  <div class="mb-3 form-floating">
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="floatingAge"
+                        placeholder="e.g., 25"
+                        required
+                    />
+                    <label for="floatingAge">Age</label>
+                  </div>
+                  <!-- ... (remaining code) ... -->
 
                   <div class="mb-3 form-floating">
                     <input
@@ -181,7 +253,7 @@
                       >Confirm Password</label
                     >
                   </div> -->
-
+        
                   <button type="submit" class="btn btn-primary">Save</button>
                 </form>
                 <div class="mb-3 px-2">
@@ -192,6 +264,8 @@
               </div>
             </div>
           </div>
+        </div>
+        
           <!-- MODAL FOR CHANGING PASSWORD -->
           <div
             class="modal fade"
